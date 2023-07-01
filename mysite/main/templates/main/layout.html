@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel='icon' href='https://png.pngtree.com/png-vector/20190420/ourlarge/pngtree-vector-radio-icon-png-image_965380.jpg'>
+  <title>{% block title %}{% endblock %}</title>
+  <style>
+     #play-button {
+    padding: 10px 20px;
+    background-color: #d44885;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  #play-button:hover {
+    background-color: #0056b3;
+  }
+
+  #volume-slider {
+    background-color: #d44885;
+    width: 200px;
+    margin-top: 10px;
+  }
+     h1 {
+    margin-top: 20px;
+  }
+  .container-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 80px;
+    padding: 0 50px;
+  }
+
+  .description {
+    margin-left: 100px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .description p {
+    text-align: justify;
+  }
+    body {
+      position: relative;
+      min-height: 100vh;
+      margin: 0;
+      padding-bottom: 120px;
+      font-size: 16px;
+      background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,0.9360119047619048) 100%);    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .container > * {
+      margin: 25px;
+    }
+
+    .invisible-link {
+      display: inline-block;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+    }   
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+      img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #FFFFFF;
+      width: 100%;
+      height: 90px;
+      background-color: #303133;
+      align-items: flex-start;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .footer-text {
+  margin-bottom: 10px;
+      margin-left: 50px;
+      margin-top: 10px;
+}
+      header {
+      background-color: #d44885;
+      color: #FFFFFF;
+      padding: 20px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px; 
+      }
+      
+      header {
+        padding: 10px; 
+      }
+        .description {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+      audio {
+        max-width: 100%; 
+      }
+        .container-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;   }    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href='http://mixail.ermin33.fvds.ru' class="invisible-link">
+      <img src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.vexels.com%2Fmedia%2Fusers%2F3%2F151183%2Fisolated%2Fpreview%2Ff8740a62cd25d5215b225f5fd6c881cc-portable-radio-icon-by-vexels.png&f=1&nofb=1&ipt=ec9c172a89976b16e537799c1b17c6d6bfe4837cec5cd613b30312ee00f8a624&ipo=images' width="60" height="60" alt"BLIN">
+    </a>  
+  </header>
+  <main>
+    {% block content %}{% endblock %} 
+  </main>
+  <footer>
+
+    <p class="footer-text">Contacts: <a href="https://vk.com/sxcute">vk.com/sxcute</a></p>
+  <p class="footer-text">Email: <a href="mailto:ermin.m@edu.narfu.ru">ermin.m@edu.narfu.ru</a></p>
+
+  </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} IR - Auto Radio {% endblock %}
+
+{% block content %}
+
+<div style="text-align: center;">
+  <h1>Auto Radio</h1>
+</div>
+
+<div class="container-page">
+  <div style="text-align: center;">
+    <div class="image-container">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fradiopotok.ru%2Ff%2Fstation%2F512%2F78.png&f=1&nofb=1&ipt=3632b2979c5b2401a1e37997890395a82d863ac874189249bb3d20c190dcc497&ipo=images" width="500" height="500" alt="Auto Radio">
+    </div>
+  
+    <div id="audio-player">
+      <audio id="audio">
+        <source src="http://pub0202.101.ru:8000/stream/air/aac/64/100">
+      </audio>
+      <div class="controls">
+        <button id="play-button">Play</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    <p><strong>Description:</strong></p>
+  <p>"Autoradio" refers to a popular Russian FM radio station that primarily focuses on broadcasting music.
+     Founded in 1993, Autoradio has gained significant popularity in the country and is known for its extensive playlist of
+     Russian and international hits.</p>
+    <p>Apart from playing music, Autoradio also provides listeners with entertainment and information through various programs,
+     contests, and interviews with popular artists. It often organizes live events and concerts featuring both Russian and
+     international musicians.</p>
+  </div>
+</div>
+
+<script>
+  const audio = document.getElementById('audio');
+  const playButton = document.getElementById('play-button');
+  const volumeSlider = document.getElementById('volume-slider');
+
+  playButton.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playButton.textContent = 'Pause';
+    } else {
+      audio.pause();
+      playButton.textContent = 'Play';
+    }
+  });
+
+  volumeSlider.addEventListener('input', function() {
+    audio.volume = volumeSlider.value;
+  });
+</script>
+
+{% endblock %}

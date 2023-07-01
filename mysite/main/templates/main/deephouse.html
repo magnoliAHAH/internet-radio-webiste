@@ -1,0 +1,61 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} IR - Deep House {% endblock %}
+
+{% block content %}
+
+<div style="text-align: center;">
+  <h1>Deep House</h1>
+</div>
+
+<div class="container-page">
+  <div style="text-align: center;">
+    <div class="image-container">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.music-bazaar.com%2Falbum-images%2Fvol18%2F871%2F871965%2F2730426-big%2FDeep-House-cover.jpg&f=1&nofb=1&ipt=20bd9070839d4c96bab0703cd4b8ed4fb1dad5b36a3ec32f607c09fed915b881&ipo=images" width="500" height="500" alt="Hip Hop">
+    </div>
+  
+    <div id="audio-player">
+      <audio id="audio">
+        <source src="http://pub0101.101.ru:8000/stream/trust/mp3/128/173">
+      </audio>
+      <div class="controls">
+        <button id="play-button">Play</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    <p><strong>Description:</strong></p>
+  <p>Deep house is a genre of electronic dance music (EDM) that emerged in the 1980s
+     and gained popularity in the 1990s. It is characterized by its smooth, mellow, and 
+    atmospheric sound, incorporating elements of soul, jazz, funk, and Chicago house.
+
+   <p>Deep house typically features a slower tempo compared to other forms of EDM, with
+      a range of around 110 to 125 beats per minute (BPM). The tracks often have
+      a deep bassline, which gives the genre its name, along with rhythmic 
+      percussion, melodic synthesizers, and soulful vocals.</p>
+  </div>
+</div>
+
+<script>
+  const audio = document.getElementById('audio');
+  const playButton = document.getElementById('play-button');
+  const volumeSlider = document.getElementById('volume-slider');
+
+  playButton.addEventListener('click', function() {
+    if (audio.paused) {
+      audio.play();
+      playButton.textContent = 'Pause';
+    } else {
+      audio.pause();
+      playButton.textContent = 'Play';
+    }
+  });
+
+  volumeSlider.addEventListener('input', function() {
+    audio.volume = volumeSlider.value;
+  });
+</script>
+
+{% endblock %}
