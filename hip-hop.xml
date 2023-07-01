@@ -1,0 +1,16 @@
+<ezstream>
+<url>http://212.109.193.197:8000/hip-hop</url>
+<sourcepassword>hackme</sourcepassword>
+<format>MP3</format>
+<filename>/opt/music_site/hip-hop/playlist.m3u</filename>
+<stream_once>0</stream_once>
+<svrinfoname>stream</svrinfoname>
+<shuffle>1</shuffle>
+<svrinfourl>http://212.109.193.197:8000/hip-hop</svrinfourl>
+<svrinfogenre>HIP-HOP</svrinfogenre>
+<svrinfodescription>Hip-hop music</svrinfodescription>
+<svrinfobitrate>320</svrinfobitrate>
+<svrinfochannels>2</svrinfochannels>
+<svrinfosamplerate>44100</svrinfosamplerate>
+<svrinfopublic>0</svrinfopublic>
+</ezstream>
